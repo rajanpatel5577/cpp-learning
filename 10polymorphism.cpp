@@ -1,9 +1,15 @@
 /*
 polymorphism basic means "many forms". 
 one name multiple forms
-In C++, polymorphism allows methods to do different things based on the object it is acting upon, even if they share the same name.
+polymorphism allows methods to do different things based on the object it is acting upon, even if they share the same name.
 This is typically achieved through inheritance and virtual functions.
 
+two types of polymorphism 
+1)compile-time polymorphism (also known as static polymorphism)
+   - function overloading
+   - operator overloading
+2)runtime polymorphism (also known as dynamic polymorphism)
+-virtual functions
 */
 
 #include <iostream>
@@ -52,9 +58,10 @@ int main()
     cout<<"value of c1 : "<<c1.real << " + " << c1.imag << "i" << endl; 
     cout<<"value of c1 : "<<c2.real << " + " << c2.imag << "i" << endl; 
 
+
     Complex c3 = c1 + c2; // Uses overloaded + operator
     // Complex c3 = c1 % c2; // Uses overloaded + operator
-    cout<<"value of c1 after c1 + c2 : "<<c3.real << " + " << c3.imag << "i" << endl; 
+    cout<<"value of c3 after c1 + c2 : "<<c3.real << " + " << c3.imag << "i" << endl; 
 
     // cout<<"value of c4 : "<<c4.real << " + " << c4.imag << "i" << endl; 
     // Complex c5 = c4 + c2; 
