@@ -25,9 +25,15 @@ template <typename T>
 void displayVector(const std::vector<T> &vec)
 {
     std::cout << "Vector elements: ";
-    for (int i = 0; i < vec.size(); ++i)
+    // for (int i = 0; i < vec.size(); ++i)
+    // {
+    //     std::cout << vec[i] << " ";
+    // }
+
+    // for (T i :vec) // this will copy all intence of i
+    for (const T &i:vec ) //pass reference to avoid copy
     {
-        std::cout << vec[i] << " ";
+        std::cout << i<< " ";
     }
     std::cout << std::endl;
 }
