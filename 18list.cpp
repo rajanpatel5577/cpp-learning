@@ -16,6 +16,11 @@ methods of list:
 - clear(): Removes all elements from the list.
 -sort(): Sorts the elements in the list.
 
+difference between vector and list:
+- Memory Allocation: Vectors use contiguous memory allocation, while lists use non-contiguous memory allocation.
+- Access Speed: Vectors provide faster access to elements by index, while lists provide slower access due to their linked structure.
+- Insertion/Deletion Speed: Lists allow for faster insertion and deletion of elements at any position compared to vectors, which may require shifting elements.
+
 */
 #include <iostream>
 #include <list>
