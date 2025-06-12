@@ -2,12 +2,11 @@
 #include <string>
 #include <chrono>
 
-class Time
+struct Time
 {
     std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
     std::chrono::duration<float> duration;
 
-public:
     Time()
     {
         start = std::chrono::high_resolution_clock::now();
@@ -34,5 +33,5 @@ void printFun()
 
 int main()
 {
-    printFun();
+    printFun(); //print take time when object destory aftre scope over
 }
