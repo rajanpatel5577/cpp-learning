@@ -1,3 +1,14 @@
+/*
+dwfault thread is main thread
+we can create onter thread inside main thread to parrelar code running
+
+wayw to create thread
+1. function pointer
+2. lambda function
+3. functors
+4. member function
+5. static member function
+*/
 #include <iostream>
 #include <string>
 #include <thread>
@@ -38,6 +49,7 @@ int main()
     std::thread worker(doWork);
     std::thread worker2(doWork2);
     std::cin.get(); // take enter key input same time while priting using dowork function
+    //cin.get block entier thread but dowork function print using differrnt thread
     s_finished = true;
     worker.join();
     worker2.join();
