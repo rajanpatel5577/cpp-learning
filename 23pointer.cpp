@@ -10,14 +10,17 @@ int main()
 {
     int num = 42;    // Declare an integer variable
     int *ptr = &num; // Declare a pointer and assign it the address of num
+    int *ptr2 = ptr;
+    int num1=*ptr2;
 
     std::cout << "Value of num: " << num << std::endl;
     std::cout << "Address of num: " << &num << std::endl;
     std::cout << "Value stored in ptr: " << ptr << std::endl;
     std::cout << "Value pointed to by ptr: " << *ptr << std::endl; // dereference ptr to get the value of num, Output: 42
-
-    *ptr = 100;                                            // Change the value of num using the pointer
-    std::cout << "New value of num: " << num << std::endl; // Output: 100
+    std::cout << "Value pointed to by ptr2: " << ptr2 << std::endl; // dereference ptr to get the value of num, Output: 42
+    std::cout << "Value pointed to by ptr2: " << *ptr2 << std::endl; // dereference ptr to get the value of num, Output: 42
+                                        // Change the value of num using the pointer
+    std::cout << "New value of num1: " << num1 << std::endl; 
 
     std::cout << std::endl;
     char *charPtr = new char('A'); // Dynamically allocate memory for a char
