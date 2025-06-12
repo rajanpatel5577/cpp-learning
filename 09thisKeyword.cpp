@@ -1,5 +1,5 @@
 // this pointer called that object who called member fuction
-//use 1 : make same variable name in member function and class member variable
+//use 1 : to make same variable name in member function and class member variable
 // use 2 : return object itself from member function
 #include <iostream>
 #include <string>
